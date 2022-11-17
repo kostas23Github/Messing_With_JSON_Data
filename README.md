@@ -21,5 +21,5 @@ The JS is structured in 2 main files, one to to handle the render logic and one 
 ## To execute
 - Fork the project
 - Make a local copy
-- Run in your text-editor(No dependancies are nesessary)
+- Run in your text-editor(No dependancies are necessary)
 
