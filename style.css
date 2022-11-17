@@ -1,0 +1,231 @@
+html,
+body {
+    color: #181818;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: beige;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+*:disabled {
+    opacity: 0.7
+}
+
+* {
+    transition: 100ms ease-in-out;
+}
+
+*:hover {
+    transition: 100ms ease-in-out;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    padding: 0;
+    margin: 2vmin auto;
+}
+
+li {
+    text-transform: uppercase;
+    letter-spacing: .2vmin;
+    padding: 1vmin 2vmin;
+    border-bottom: 1px solid #181818;
+    width: 100%;
+}
+
+li[current] {
+    border-top: 2px solid #181818;
+    border-right: 2px solid #181818;
+    border-left: 2px solid #181818;
+    border-bottom: none;
+}
+
+/* li:after {
+    bottom: 0%;
+    content: "";
+    display: block;
+    height: 3px;
+    right: 0%;
+    position: absolute;
+    background: rgb(24, 24, 24);
+    transition: width 500ms ease 0s;
+    width: 0;
+}
+
+li:hover::after {
+    width: 100%;
+    right: 0%;
+} */
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+    font-size: 1.5rem;
+}
+
+div#guide-container {
+    border: 1px solid #181818;
+    display: flex;
+    z-index: 1;
+    width: 99%;
+    padding: 2px 0;
+    margin: 10px auto;
+}
+
+.guide-text-container {
+    display: none;
+    width: 80%;
+}
+
+#guide-button {
+    width: 20%;
+}
+
+span#guide-button {
+    cursor: pointer;
+}
+
+span#guide-button:hover {
+    font-size: larger;
+}
+
+.container {
+    border: 1px inset #181818;
+    border-radius: 2vmin;
+    width: 70vmin;
+    margin: 0 auto;
+    border-bottom: none;
+    border-top: none;
+}
+
+.container:hover {
+    border-radius: 5vmin;
+    border-width: 3px;
+}
+
+h5 {
+    margin: 0;
+    padding-bottom: 1vmin;
+    padding-top: 2vmin;
+}
+
+input,
+select {
+    background-color: #181818d0;
+    color: beige;
+    border-radius: 3vmin;
+    padding: 1vmin 0;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+}
+
+input::placeholder {
+    color: beige;
+    opacity: 0.7;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+div#display-options {
+    display: none;
+}
+
+div.display-options-container:hover div#display-options {
+    display: block;
+    margin: 0 auto;
+    width: 50vmin;
+}
+
+input[type="checkbox"],
+button {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    border-radius: 4vmin;
+    padding: 1vmin 4vmin;
+    margin: 3vmin auto;
+    transition: 200ms;
+    font-size: 1.3rem;
+}
+
+button:hover {
+    transform: scale(1.5);
+    transition: 200ms;
+}
+
+button:active {
+    transform: scale(1);
+}
+
+.results span:first-child {
+    font-weight:700;
+    font-size: larger;
+}
+
+footer {
+    background-color: #181818;
+    color: beige;
+    position: relative;
+    /* TO PLACE ON BOTTOM  bc bottom:0 didn't do the trick ???*/
+    bottom: 0%; 
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+}
+
+p.copyright {
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    li {
+        letter-spacing: 0;
+        padding: 0 2px;
+    }
+
+    a {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    ul {
+        display: block;
+        width: 90%;
+    }
+
+    li {
+        border: none;
+    }
+
+    li[current] {
+        border-top: none;
+    }
+
+    li[current]::after {
+        content: '  -->';
+    }
+
+    li[current]::before {
+        content: '<--  ';
+    }
+}

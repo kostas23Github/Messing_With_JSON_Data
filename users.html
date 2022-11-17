@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./users.js"></script>
+    <title>Users</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="products"><a href="#">Products</a></li>
+                <li id="carts"><a href="#">Carts</a></li>
+                <li id="users" current><a href="./users.html">Users</a></li>
+                <li id="posts"><a href="#">Products</a></li>
+                <li id="comments"><a href="#">Comments</a></li>
+                <li id="quotes"><a href="#">Quotes</a></li>
+                <li id="todos"><a href="#">Todos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="options">
+            <div id="guide-container">
+                <div class="guide-text-container">
+                    <p class="guide-text">
+                        Click search to display all users. Then hover over first text to check which values of the
+                        results
+                        you want to see. Or sort the results by selecting which value to sort by.
+                    </p>
+                    <p class="guide-text">
+                        To search for users that fit certain criteria first type the criteria then click the search
+                        button.
+                        Then you can choose to sort the results.
+                    </p>
+                    <p class="guide-text">
+                        To search for a user's cart or todo or posts first type the user id and then the desired option.
+                        Then you can choose to sort the results.
+                    </p>
+                    <p class="guide-text">
+                        At any time prior to hitting the search button you can shoose how many results you want to have
+                        by
+                        selecting the appropriate number. Upon filling some inputs, some other will fade because they
+                        shouldn't be filled together.
+                    </p>
+                    <p class="guide-text">
+                        To search for new results or sth doesn't behave as expected or an error has occured refresh the
+                        page.
+                    </p>
+                </div>
+                <span id="guide-button">SHOW TIPS</span>
+            </div>
+            <div class="display-options-container container">
+                <h5>Choose which of the current values of each user you want to see</h5>
+                <div id="display-options"></div>
+            </div>
+            <div class="search-container container">
+                <h5>Type one of these(first-name, last-name, e-mail) to search for the user/s match the criteria.</h5>
+                <input type="search" placeholder="search term" id="search-term">
+            </div>
+            <div class="filter-container container">
+                <h5>Type to search for users that fit certain criteria (i.e. All male users)</h5>
+                <div>
+                    <label for="filterKey">A property</label>
+                    <input type="text" name="filterKey" id="filterKey" placeholder="e.g.   gender">
+                </div>
+                <div>
+                    <label for="filterValue">Its value</label>
+                    <input type="text" name="filter" id="filterValue" placeholder="e.g.   male">
+                </div>
+            </div>
+            <div class="limit-container container">
+                <label for="range">No of Results (1-100)</label>
+                <input type="number" name="range" id="range" min="1" max="100" value="10">
+            </div>
+            <div class="userOptions-container container">
+                <h5>First select the id of the user, then which of the options you what to display!</h5>
+                <br>
+                <label for="id">ID:</label>
+                <input type="number" name="id" id="id" min="1" max="100" placeholder="1-100">
+                <br>
+                <label for="userOptions">Option:</label>
+                <select name="userOptions" id="userOptions">
+                    <option value="" selected></option>
+                    <option value="carts">Carts</option>
+                    <option value="todos">Todos</option>
+                    <option value="posts">Posts</option>
+                </select>
+            </div>
+            <div class="sort-container container">
+                <label for="sort-direction">Choose short direction:</label>
+                <select name="sort-direction" id="sort-direction">
+                    <option value="ascending">Ascending</option>
+                    <option value="descending">Descending</option>
+                </select>
+                <br>
+                <label for="sort-list">Choose one option to sort the results:</label>
+                <select name="sort-list" id="sort-list"></select>
+            </div>
+            <button>Search</button>
+        </section>
+        <div class="results"></div>
+    </main>
+    <footer>
+        <p class="f-text">A fun project to learn the fetch API as well as handling JSON files.</p>
+        <p class="copyright">Copyright 2022 - All lefts & rights reserved.</p>
+    </footer>
+</body>
+
+</html>
