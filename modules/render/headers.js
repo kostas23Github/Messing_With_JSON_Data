@@ -1,3 +1,5 @@
+import { renderObjectEntries } from "./results.js";
+
 export const renderResponseHeader = (text) => {
     // Renders the header of the the results shown below it.
     const resultsDiv = document.querySelector('.results')

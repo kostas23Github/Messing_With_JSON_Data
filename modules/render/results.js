@@ -29,7 +29,7 @@ export const renderResultsArray = (array) => {
     // console.log('Am i executed?')
 }
 
-const renderObjectEntries = (obj, flag = true) => {
+export const renderObjectEntries = (obj, flag = true) => {
     // The result obj cannot be rendered by the browser so i convert each property to an array(Object.entries()) and then to a string to be displayed. This function is used by the renderResultsArray/renderResultsObj functions.
     let textContent = '';
     for (const [key, value] of Object.entries(obj)) {
